@@ -12,6 +12,10 @@ import { Ionicons } from "@expo/vector-icons";
 import Recommendation from "../Genre/Recommendation";
 import Action from "../Genre/Action";
 import Comedy from "../Genre/Comedy";
+import Fantasy from "../Genre/Fantasy";
+import Horror from "../Genre/Horror";
+import Romance from "../Genre/Romance";
+import SciFi from "../Genre/SciFi";
 import SlideShow from "./Slide";
 import { handleViewAll } from "../navigation/utils";
 
@@ -33,7 +37,7 @@ const HomeScreen = () => {
       },
       {
         title: "Wanda Vision",
-        image: require("../assets/image/Movie3.jpg"),
+        image: require("../assets/image/Movie4.jpg"),
       },
       {
         title: "Wanda Vision",
@@ -95,25 +99,30 @@ const HomeScreen = () => {
 
   const horror = [
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie3.jpg"),
+      title: "The Conjuring",
+      image: require("../assets/Horror/conjuring.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie3.jpg"),
+      title: "Imaginary",
+      image: require("../assets/Horror/Imaginary.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie3.jpg"),
+      title: "IT Chapter Two",
+      image: require("../assets/Horror/It.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie3.jpg"),
+      title: "World War Z",
+      image: require("../assets/Horror/worldz.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie3.jpg"),
+      title: "The Remains",
+      image: require("../assets/Horror/remains.jpg"),
     },
+    {
+      title: "House of the Witch",
+      image: require("../assets/Horror/witch.jpg"),
+    },
+   
   ];
 
 
@@ -165,25 +174,26 @@ const HomeScreen = () => {
 
   const fantasy = [
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie7.jpg"),
+      title: "Harry Potter And The Philosopher's Stone",
+      image: require("../assets/Fantasy/HarryPotter.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie7.jpg"),
+      title: "Destiny Rewritten",
+      image: require("../assets/Fantasy/DestinyRewritten.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie7.jpg"),
+      title: "Avatar The Way of Water",
+      image: require("../assets/Fantasy/Avatar.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie7.jpg"),
+      title: "The Little Witch",
+      image: require("../assets/Fantasy/Witch.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie7.jpg"),
+      title: "The Beauty and The Beast",
+      image: require("../assets/Fantasy/Thebeast.jpg"),
     },
+   
   ];
 
   return (
@@ -220,9 +230,39 @@ const HomeScreen = () => {
           <View>
             <Comedy
               movies={comedy}
-              onViewAllPress={() => handleViewAll ()}
+              onViewAllPress={() => handleViewAll (navigation, "Comedy")}
             />
           </View>
+
+          <View>
+            <Fantasy
+              movies={fantasy}
+              onViewAllPress={() => handleViewAll (navigation, "Fantasy")}
+            />
+          </View>
+          <View>
+            <Horror
+              movies={horror}
+              onViewAllPress={() => handleViewAll (navigation, "Horror")}
+            />
+          </View>
+
+          <View>
+            <Romance
+              movies={romance}
+              onViewAllPress={() => handleViewAll (navigation, "Romance")}
+            />
+          </View>
+
+          <View>
+            <SciFi
+              movies={sciFi}
+              onViewAllPress={() => handleViewAll (navigation, "SciFi")}
+            />
+          </View>
+
+
+
         </View>
       </ScrollView>
     </SafeAreaView>

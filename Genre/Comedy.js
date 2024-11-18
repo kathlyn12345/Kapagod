@@ -26,7 +26,7 @@ const Comedy = ({ movies, onViewAllPress }) => {
     <View style={styles.container}>
       <View style={styles.Wrapper}>
         <Text style={styles.Title}>Comedy</Text>
-        <TouchableOpacity onPress={() => onViewAllPress ('AllAction')}>
+        <TouchableOpacity onPress={() => onViewAllPress ('AllComedy')}>
           <Text style={styles.text}>View All</Text>
         </TouchableOpacity>
       </View>

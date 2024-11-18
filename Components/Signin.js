@@ -78,6 +78,7 @@ const SignIn = () => {
           color="rgba(255, 255, 255, 0.7)"
           style={styles.inputIcon}
         />
+
         <TextInput
           style={styles.input}
           placeholder="Password"
@@ -86,15 +87,18 @@ const SignIn = () => {
           value={password}
           onChangeText={setPassword}
         />
+
         <TouchableOpacity
           onPress={togglePasswordVisibility}
           style={styles.eyeIcon}
         >
+
           <Ionicons
             name={passwordVisible ? "eye-off" : "eye"}
             size={20}
             color="rgba(255, 255, 255, 0.7)"
           />
+          
         </TouchableOpacity>
       </View>
 

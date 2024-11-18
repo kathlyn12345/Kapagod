@@ -9,6 +9,9 @@ import HomeScreen from './Components/Home';
 import SignIn from './Components/Signin';
 import SignUp from './Components/Signup';
 import AllAction from './AllMovie/AllAction';
+import AllComedy from './AllMovie/AllComedy';
+import AllFantasy from './AllMovie/AllFantasy';
+import AllHorror from './AllMovie/AllHorror';
 
 const Stack = createStackNavigator();
 
@@ -47,6 +50,21 @@ const App = () => {
           <Stack.Screen
             name="AllAction"
             component={AllAction}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="AllComedy"
+            component={AllComedy}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="AllFantasy"
+            component={AllFantasy}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="AllHorror"
+            component={AllHorror}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>
