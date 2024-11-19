@@ -27,10 +27,10 @@ const SignUp = () => {
       return;
     }
     try {
-      setErrorMessage(""); // Clear any previous error
+      setErrorMessage(""); 
       await signUpWithEmailPassword(email, password);
       alert("Account created successfully!");
-      navigation.navigate("SignIn"); // Navigate to SignIn screen after successful signup
+      navigation.navigate("SignIn"); 
     } catch (error) {
       setErrorMessage("Error creating account: " + error.message);
     }
@@ -145,16 +145,16 @@ const styles = StyleSheet.create({
     right: 10,
   },
   signUpButton: {
-    backgroundColor: "#FF9500",
-    width: "100%",
-    paddingVertical: 15,
+    backgroundColor: "#FFFFFF",
+    width: 318,
+    height: 45,
     borderRadius: 30,
     alignItems: "center",
     justifyContent: "center",
     marginTop: 20,
   },
   signUpText: {
-    color: "#FFFFFF",
+    color: "#000000",
     fontSize: 20,
     fontFamily: "Roboto-Bold",
   },

@@ -11,7 +11,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { useCustomFonts } from "../Components/font";
 
-const AllComedy = () => {
+const AllRomance = () => {
   const fontsLoaded = useCustomFonts();
 
   if (!fontsLoaded) {
@@ -25,62 +25,62 @@ const AllComedy = () => {
   const images = [
     {
       id: 1,
-      image: require("../assets/Comedy/Argylle.jpg"),
-      title: "Argylle",
+      image: require("../assets/Romance/titanic.jpg"),
+      title: "Titanic",
     },
     {
       id: 2,
-      image: require("../assets/Comedy/Beetlejuice 2.jpg"),
-      title: "Beetlejuice 2",
+      image: require("../assets/Romance/50.jpg"),
+      title: "50 First Dates",
     },
     {
       id: 3,
-      image: require("../assets/Comedy/Dumb and Dumber.jpg"),
-      title: "Dumb and Dumber",
+      image: require("../assets/Romance/date.jpg"),
+      title: "HoliDates",
     },
     {
       id: 4,
-      image: require("../assets/Comedy/GhostBusters.jpg"),
-      title: "GhostBuster Frozen Empire",
+      image: require("../assets/Romance/hating.jpg"),
+      title: "The Hating Game",
     },
-    { id: 5, image: require("../assets/Comedy/Hit Man.jpg"), title: "Hit Man" },
+    { id: 5, image: require("../assets/Romance/last.jpg"), title: "Last Year's Mistake" },
     {
       id: 6,
-      image: require("../assets/Comedy/IF.jpg"),
-      title: "IF...",
+      image: require("../assets/Romance/pass.jpg"),
+      title: "Passengers",
     },
     {
       id: 7,
-      image: require("../assets/Comedy/Lisa Frankenstein.jpg"),
-      title: "Lisa Frankenstein",
+      image: require("../assets/Romance/racing.jpg"),
+      title: "Racing Hearts",
     },
     {
       id: 8,
-      image: require("../assets/Comedy/Mean Girls.jpg"),
-      title: "Mean Girls",
+      image: require("../assets/Romance/wonder.jpg"),
+      title: "Mean To The Wonder",
     },
     {
       id: 9,
-      image: require("../assets/Comedy/Mr. Beans.jpg"),
-      title: "Mr. Beans",
+      image: require("../assets/Romance/leap.jpg"),
+      title: "Leap Year",
     },
-    { id: 10, image: require("../assets/Comedy/Problemista.jpg"), title: "Problemista" },
-    { id: 11, image: require("../assets/Comedy/Ted.jpg"), title: "Ted" },
+    { id: 10, image: require("../assets/Romance/man.jpg"), title: "A Man Called Otto" },
+    { id: 11, image: require("../assets/Romance/ends.jpg"), title: "It Ends With Us" },
     {
       id: 12,
-      image: require("../assets/Comedy/The Fall Guy.jpg"),
-      title: "The Fall Guy",
+      image: require("../assets/Romance/bride.jpg"),
+      title: "RunawayBride",
     },
-    { id: 13, image: require("../assets/Comedy/The Peoples Joker.jpg"), title: "The Peoples Joker" },
+    { id: 13, image: require("../assets/Romance/girl.jpg"), title: "Keeping My Girl" },
     {
       id: 14,
-      image: require("../assets/Comedy/Trouble 2024.jpg"),
-      title: "Trouble 2024",
+      image: require("../assets/Romance/desk.jpg"),
+      title: "The Boss's Desk",
     },
     {
       id: 15,
-      image: require("../assets/Comedy/Wedding Crashers.jpg"),
-      title: "Wedding Crashers",
+      image: require("../assets/Romance/before.jpg"),
+      title: "Me Before You",
     },
   ];
 
@@ -110,7 +110,7 @@ const AllComedy = () => {
         >
           <Ionicons name="arrow-back" size={24} color="#FFFFFF" />
         </TouchableOpacity>
-        <Text style={styles.Title}>Comedy</Text>
+        <Text style={styles.Title}>Romance</Text>
       </View>
 
       <FlatList
@@ -174,4 +174,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AllComedy;
+export default AllRomance;

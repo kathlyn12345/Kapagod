@@ -12,6 +12,7 @@ import AllAction from './AllMovie/AllAction';
 import AllComedy from './AllMovie/AllComedy';
 import AllFantasy from './AllMovie/AllFantasy';
 import AllHorror from './AllMovie/AllHorror';
+import AllRomance from './AllMovie/AllRomance';
 
 const Stack = createStackNavigator();
 
@@ -67,6 +68,12 @@ const App = () => {
             component={AllHorror}
             options={{ headerShown: false }}
           />
+          <Stack.Screen
+            name="AllRomance"
+            component={AllRomance}
+            options={{ headerShown: false }}
+          />
+        
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

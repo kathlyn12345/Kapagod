@@ -7,7 +7,7 @@ import {
   SafeAreaView,
   ScrollView,
 } from "react-native";
-import { useNavigation } from "@react-navigation/native"; 
+import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import Recommendation from "../Genre/Recommendation";
 import Action from "../Genre/Action";
@@ -23,7 +23,6 @@ const HomeScreen = () => {
   const navigation = useNavigation();
   const scrollX = useRef(new Animated.Value(0)).current;
 
-  // Example movie data to pass to MovieRecommendation component
   const movie = {
     title: "Recommendation",
     movies: [
@@ -49,7 +48,6 @@ const HomeScreen = () => {
       },
     ],
   };
-  
 
   const action = [
     {
@@ -76,24 +74,24 @@ const HomeScreen = () => {
 
   const comedy = [
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie4.jpg"),
+      title: "Argylle",
+      image: require("../assets/Comedy/Argylle.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie4.jpg"),
+      title: "Beetlejuice 2",
+      image: require("../assets/Comedy/Beetlejuice 2.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie4.jpg"),
+      title: "Dumb and Dumber",
+      image: require("../assets/Comedy/Dumb and Dumber.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie4.jpg"),
+      title: "GhostBuster Frozen Empire",
+      image: require("../assets/Comedy/GhostBusters.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie4.jpg"),
+      title: "Hit Man",
+      image: require("../assets/Comedy/Hit Man.jpg"),
     },
   ];
 
@@ -122,9 +120,7 @@ const HomeScreen = () => {
       title: "House of the Witch",
       image: require("../assets/Horror/witch.jpg"),
     },
-   
   ];
-
 
   const sciFi = [
     {
@@ -151,24 +147,28 @@ const HomeScreen = () => {
 
   const romance = [
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie6.jpg"),
+      title: "Titanic",
+      image: require("../assets/Romance/titanic.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie6.jpg"),
+      title: "50 First Dates",
+      image: require("../assets/Romance/50.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie6.jpg"),
+      title: "HoliDate",
+      image: require("../assets/Romance/date.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie6.jpg"),
+      title: "The Hating Game",
+      image: require("../assets/Romance/hating.jpg"),
     },
     {
-      title: "Action Movies",
-      image: require("../assets/image/Movie6.jpg"),
+      title: "Last Year's Mistake",
+      image: require("../assets/Romance/last.jpg"),
+    },
+    {
+      title: "Passengers",
+      image: require("../assets/Romance/pass.jpg"),
     },
   ];
 
@@ -193,7 +193,6 @@ const HomeScreen = () => {
       title: "The Beauty and The Beast",
       image: require("../assets/Fantasy/Thebeast.jpg"),
     },
-   
   ];
 
   return (
@@ -230,39 +229,36 @@ const HomeScreen = () => {
           <View>
             <Comedy
               movies={comedy}
-              onViewAllPress={() => handleViewAll (navigation, "Comedy")}
+              onViewAllPress={() => handleViewAll(navigation, "Comedy")}
             />
           </View>
 
           <View>
             <Fantasy
               movies={fantasy}
-              onViewAllPress={() => handleViewAll (navigation, "Fantasy")}
+              onViewAllPress={() => handleViewAll(navigation, "Fantasy")}
             />
           </View>
           <View>
             <Horror
               movies={horror}
-              onViewAllPress={() => handleViewAll (navigation, "Horror")}
+              onViewAllPress={() => handleViewAll(navigation, "Horror")}
             />
           </View>
 
           <View>
             <Romance
               movies={romance}
-              onViewAllPress={() => handleViewAll (navigation, "Romance")}
+              onViewAllPress={() => handleViewAll(navigation, "Romance")}
             />
           </View>
 
           <View>
             <SciFi
               movies={sciFi}
-              onViewAllPress={() => handleViewAll (navigation, "SciFi")}
+              onViewAllPress={() => handleViewAll(navigation, "SciFi")}
             />
           </View>
-
-
-
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -281,34 +277,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 15,
     backgroundColor: "#000000",
-  },
-
-  headerTitle: {
-    fontSize: 24,
-    color: "#FFFFFF",
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-
-  titleContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    paddingHorizontal: 10,
-    textAlign: "center",
-    width: "80%", // Make sure the title doesn't stretch too far
-  },
-
-  slideText: {
-    fontSize: 24,
-    color: "#FFFFFF",
-    fontWeight: "bold",
-    marginBottom: 10,
-    textAlign: "center",
-    width: "100%", // Full width of the container
-    flexWrap: "wrap", // Allow wrapping if needed
-    flexShrink: 1, // Allow text to shrink if necessary
-    overflow: "hidden", // Ensure no overflow occurs
   },
 });
 
