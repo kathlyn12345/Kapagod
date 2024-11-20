@@ -6,6 +6,7 @@ import {
   Animated,
   SafeAreaView,
   ScrollView,
+  Alert,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
@@ -18,10 +19,12 @@ import Romance from "../Genre/Romance";
 import SciFi from "../Genre/SciFi";
 import SlideShow from "./Slide";
 import { handleViewAll } from "../navigation/utils";
+import Sidebar from "../navigation/Sidebar";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
   const scrollX = useRef(new Animated.Value(0)).current;
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
   const movie = {
     title: "Recommendation",
@@ -195,6 +198,16 @@ const HomeScreen = () => {
     },
   ];
 
+  const handleLogout = () => {
+    setSidebarVisible(false);
+    Alert.alert("Logout", "You have been logged out successfully.");
+    navigation.navigate("SignIn");
+  };
+
+  const toggleSidebar = () => {
+    setSidebarVisible((prev) => !prev);
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView
@@ -203,8 +216,12 @@ const HomeScreen = () => {
       >
         <View style={styles.container}>
           <View style={styles.header}>
-            <TouchableOpacity>
-              <Ionicons name="menu" size={30} color="#FFFFFF" />
+            <TouchableOpacity onPress={toggleSidebar}>
+              {sidebarVisible ? (
+                <Ionicons name="close" size={30} color="#FFFFFF" />
+              ) : (
+                <Ionicons name="menu" size={30} color="#FFFFFF" />
+              )}
             </TouchableOpacity>
             <TouchableOpacity>
               <Ionicons name="search" size={30} color="#FFFFFF" />
@@ -261,6 +278,12 @@ const HomeScreen = () => {
           </View>
         </View>
       </ScrollView>
+
+      <Sidebar
+        isVisible={sidebarVisible}
+        onClose={() => setSidebarVisible(false)}
+        onLogout={handleLogout}
+      />
     </SafeAreaView>
   );
 };
